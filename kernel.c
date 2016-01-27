@@ -14,7 +14,7 @@ void put_char(char c, int x, int y)
 {
 	int pos = y * 80 + x;
 	vidmem[pos*2] = c;
-	vidmem[pos*2+1] = 0x02;
+	vidmem[pos*2+1] = 0x24;
 }
 
 void put_string(const char* string)
@@ -57,9 +57,5 @@ void clear_screen()
 void kernel_main(void)
 {
 	clear_screen();
-	int i;
-	for(i = 0; i < 80; i++)
-	{
-		put_string("H");
-	}
+	put_string("Hello World! This is a kernel!");
 }
