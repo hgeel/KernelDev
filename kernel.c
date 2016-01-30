@@ -1,3 +1,5 @@
+//Developing Interrupts.
+
 char* vidmem = (char*) 0xB8000;
 
 int currentPosX = 0;
